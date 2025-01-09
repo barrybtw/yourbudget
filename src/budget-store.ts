@@ -1,6 +1,42 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
+/**
+ * Fake data to be deleted later
+ */
+
+const incomes = [
+  {
+    id: 1,
+    name: "Salary",
+    amount: 50000,
+    frequency: "biweekly",
+  },
+  {
+    id: 2,
+    name: "Freelance",
+    amount: 2000,
+    frequency: "monthly",
+  },
+] satisfies Income[];
+
+const expenses = [
+  {
+    id: 1,
+    name: "Rent",
+    amount: 1000,
+    date_added: new Date(),
+    frequency: "monthly",
+  },
+  {
+    id: 2,
+    name: "Groceries",
+    amount: 200,
+    date_added: new Date(),
+    frequency: "weekly",
+  },
+] satisfies Expense[];
+
 type Income = {
   id: number;
   name: string;
@@ -30,8 +66,8 @@ interface BudgetStore {
 export const useBudgetStore = create<BudgetStore>()(
   persist(
     (set, _get) => ({
-      incomes: [],
-      expenses: [],
+      incomes: incomes,
+      expenses: expenses,
       addIncome: (income) =>
         set((state) => ({ incomes: [...state.incomes, income] })),
       addExpense: (expense) =>

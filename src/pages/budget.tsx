@@ -9,7 +9,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import clsx from "clsx";
 
 function ActionableButton({
   onClick,
@@ -27,7 +26,7 @@ function ActionableButton({
           {...rest}
           className={cn(
             className,
-            "rounded-md border-[1px] dark:border-white border-black p-2 font-semibold uppercase flex items-center justify-center flex-col gap-2"
+            "rounded-md border-[1px] dark:border-white border-black p-2 font-semibold uppercase flex items-center justify-center flex-col gap-2 dark:text-black"
           )}
         >
           {children}
@@ -46,19 +45,10 @@ function ActionableButton({
 export default function Budget() {
   const { incomes, expenses, addIncome } = useBudgetStore((state) => state);
 
-  console.log(incomes, expenses);
-
-  function add() {
-    addIncome({
-      amount: 100,
-      frequency: "biweekly",
-      name: "Løn",
-      id: Math.random(),
-    });
-  }
+  console.log(incomes, expenses, addIncome);
 
   return (
-    <Layout>
+    <Layout className="flex flex-col gap-4">
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex-[2] flex flex-col gap-2">
           <h2 className="text-2xl font-bold inline italic">oversigt</h2>
@@ -107,6 +97,7 @@ export default function Budget() {
           </div>
         </div>
       </div>
+      <div>Udgifter</div>
     </Layout>
   );
 }
