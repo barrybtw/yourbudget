@@ -1,3 +1,5 @@
+import { Layout } from "@/components/inner-layout";
+
 export default function Index() {
-  return <div>Hjemmeside</div>;
+  return <Layout>Hjemmeside</Layout>;
 }
