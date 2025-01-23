@@ -1,4 +1,5 @@
 import { Layout } from "@/components/inner-layout";
+import { Badge } from "@/components/ui/badge";
 
 export default function OmOs() {
   return (
@@ -7,7 +8,14 @@ export default function OmOs() {
       <div className="flex flex-col w-full mb-16">
         <div className="my-8 flex flex-col sm:flex-row items-start gap-12 lg:ml-44">
           <div className="flex flex-col gap-2 items-start max-w-[50ch]">
-            <h3 className="font-bold">Sigma Nico</h3>
+            <div className="flex items-baseline justify-between w-full">
+              <h3 className="font-bold">Sigma Nico</h3>
+              <div className="flex gap-2">
+                <Badge variant="default">Pizza</Badge>
+                <Badge variant="default">Fodbold</Badge>
+                <Badge variant="default">Neger</Badge>
+              </div>
+            </div>
             <p>
               Jeg er sigma, den største af dem alle. Ingen bestemmer over mig,
               og jeg går altid min egen vej. Jeg står alene, men det er en
@@ -28,7 +36,14 @@ export default function OmOs() {
         </div>
         <div className="my-8 flex flex-col sm:flex-row items-start gap-12 lg:ml-32">
           <div className="flex flex-col gap-2 items-start max-w-[50ch]">
-            <h3 className="font-bold">Beta Willy</h3>
+            <div className="flex items-baseline justify-between w-full">
+              <h3 className="font-bold">Beta Willy</h3>
+              <div className="flex gap-2">
+                <Badge variant="default">Skimester</Badge>
+                <Badge variant="default">Adidas</Badge>
+                <Badge variant="default">Avocado</Badge>
+              </div>
+            </div>{" "}
             <p>
               Jeg er beta, den loyale støtte og den solide ven. Jeg behøver ikke
               være centrum for opmærksomheden, for jeg ved, at min styrke ligger
@@ -48,7 +63,14 @@ export default function OmOs() {
         </div>
         <div className="my-8 flex flex-col sm:flex-row items-start gap-12 lg:ml-72">
           <div className="flex flex-col gap-2 items-start max-w-[50ch]">
-            <h3 className="font-bold">Alpha Seb</h3>
+            <div className="flex items-baseline justify-between w-full">
+              <h3 className="font-bold">Alpha Seb</h3>
+              <div className="flex gap-2">
+                <Badge variant="default">Mazda</Badge>
+                <Badge variant="default">Skak</Badge>
+                <Badge variant="default">Gains</Badge>
+              </div>
+            </div>{" "}
             <p>
               Jeg er alpha, født til at lede og til at tage ansvar. Mit kald er
               at tage kontrol, at gå forrest og vise vejen for andre. Jeg søger
@@ -69,7 +91,14 @@ export default function OmOs() {
         </div>
         <div className="my-8 flex flex-col sm:flex-row items-start gap-12 lg:ml-52">
           <div className="flex flex-col gap-2 items-start max-w-[50ch]">
-            <h3 className="font-bold">Omega Niels</h3>
+            <div className="flex items-baseline justify-between w-full">
+              <h3 className="font-bold">Omega Niels</h3>
+              <div className="flex gap-2">
+                <Badge variant="default">Volvo</Badge>
+                <Badge variant="default">Brun sovs</Badge>
+                <Badge variant="default">Booster</Badge>
+              </div>
+            </div>{" "}
             <p>
               Jeg er omega, den fredelige afslutning og den rolige begyndelse.
               Jeg står uden for hierarkiet, hvor jeg finder ro i mig selv. Jeg
