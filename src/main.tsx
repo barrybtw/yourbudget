@@ -8,7 +8,7 @@ import Home from "./pages/index";
 
 import "./index.css";
 
-const BudgetPage = lazy(() => import("./pages/budget"));
+const LazyOmOs = lazy(() => import("./pages/om-os"));
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,7 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/budget" element={<BudgetPage />} />
+          <Route path="/om-os" element={<LazyOmOs />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

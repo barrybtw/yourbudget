@@ -18,7 +18,7 @@ export default function NavigationBar() {
       </h1>
       <div className="text-sm sm:text-md flex gap-4 md:gap-8 justify-center">
         <NavLink to="/">Forside</NavLink>
-        <NavLink to="/budget">Budget</NavLink>
+        <NavLink to="/om-os">Om os</NavLink>
       </div>
       <div ref={switchRef} className="flex items-center justify-end">
         <ModeToggle />
