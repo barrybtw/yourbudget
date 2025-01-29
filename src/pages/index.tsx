@@ -1,15 +1,6 @@
 import { Expense, Frequency, Income, useBudgetStore } from "@/budget-store";
 import IncomeExpenseTable from "@/components/income-expense-table";
 import { Layout } from "@/components/inner-layout";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
 import { ColumnDef } from "@tanstack/react-table";
 
 const translate = (key: Frequency) => {
@@ -75,29 +66,6 @@ export default function Budget() {
       accessorKey: "frequency",
       header: "Frekvens",
       cell: (cell) => <span>{translate(cell.getValue() as Frequency)}</span>,
-    },
-    {
-      accessorKey: "delete",
-      header: "Slet",
-      cell: (cell) => (
-        <Dialog>
-          <DialogTrigger>
-            <button className={cn("btn", "btn-red")}>Slet</button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Slet udgift</DialogTitle>
-            </DialogHeader>
-            <DialogDescription>
-              Er du sikker på at du vil slette denne udgift?
-            </DialogDescription>
-            <div className="flex gap-2">
-              <button className={cn("btn", "btn-red")}>Ja</button>
-              <button className={cn("btn", "btn-green")}>Nej</button>
-            </div>
-          </DialogContent>
-        </Dialog>
-      ),
     },
   ];
 
