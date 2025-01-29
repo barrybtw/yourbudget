@@ -37,19 +37,21 @@ const expenses = [
   },
 ] satisfies Expense[];
 
-type Income = {
+export type Frequency = "daily" | "biweekly" | "weekly" | "monthly" | "yearly";
+
+export type Income = {
   id: number;
   name: string;
   amount: number;
-  frequency: "biweekly" | "monthly" | "yearly";
+  frequency: Frequency;
 };
 
-type Expense = {
+export type Expense = {
   id: number;
   name: string;
   amount: number;
   date_added: Date;
-  frequency?: "daily" | "weekly" | "monthly" | "yearly";
+  frequency: Frequency;
 };
 
 interface BudgetStore {
