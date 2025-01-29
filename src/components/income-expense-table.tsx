@@ -1,4 +1,3 @@
-import { type Income, Expense } from "@/budget-store";
 import {
   ColumnDef,
   flexRender,
